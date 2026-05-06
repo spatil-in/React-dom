@@ -6,7 +6,7 @@ export default function Github(){
 
     useEffect(() => {
 
-        fetch('https://api.github.com/users/hiteshchoudhary')
+        fetch('https://api.github.com/users/spatil-in')
         .then((res) => res.json())
         .then(res => setData(res))
     }, [])
