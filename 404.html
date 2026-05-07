@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+            sessionStorage.removeItem('redirect');
+            window.history.replaceState(null, '', redirect);
+        }
+
+        const path = window.location.pathname;
+        const search = window.location.search;
+        sessionStorage.setItem('redirect', path + search);
+        window.location.replace('/React-dom/');
+    </script>
+  </head>
+</html>
